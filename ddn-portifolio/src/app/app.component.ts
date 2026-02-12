@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ddn-portifolio';
+  activeCategory = 'Todos';
+
+  onCategoryChange(category: string) {
+    this.activeCategory = category;
+  }
 }
