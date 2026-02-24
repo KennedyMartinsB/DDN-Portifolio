@@ -8,7 +8,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class FilterComponent {
   @Output() categoryChange = new EventEmitter<string>();
 
-  categories = ['Todos', 'originais', 'Celebridades', 'Publicidade', 'Filme'];
+  categories = ['All', 'originals', 'fashion', 'artists', 'brands'];
+  // categories = ['Todos', 'originais', 'Celebridades', 'Publicidade', 'Filme'];
+  // Capas, Originais, moda, Marca, artistas
+
   selectedCategory = 'Todos';
 
   selectCategory(category: string) {

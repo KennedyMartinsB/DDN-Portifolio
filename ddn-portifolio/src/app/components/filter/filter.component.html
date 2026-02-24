@@ -1,22 +1,25 @@
-<div class="fixed bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-50 w-[95%] sm:w-auto overflow-x-auto no-scrollbar">
-  <nav class="bg-gray-900/80 backdrop-blur-md border border-gray-800 px-2 py-1.5 rounded-full flex items-center space-x-1 min-w-max mx-auto">
-    <button
-      *ngFor="let category of categories"
-      (click)="selectCategory(category)"
-      class="px-4 sm:px-6 py-2 rounded-full text-[10px] sm:text-xs font-medium transition-all whitespace-nowrap"
-      [ngClass]="selectedCategory === category ? 'bg-white text-black' : 'text-gray-400 hover:text-white'"
-    >
-      {{ category }}
-    </button>
-  </nav>
+<div class="fixed bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-50 w-full px-4 sm:w-max">
+
+  <div class="overflow-x-auto no-scrollbar snap-x snap-mandatory touch-pan-x">
+
+    <nav class="bg-gray-900/80 backdrop-blur-md border border-gray-800 p-1.5 rounded-full flex items-center gap-1 min-w-max mx-auto shadow-2xl">
+      <button
+        *ngFor="let category of categories"
+        (click)="selectCategory(category)"
+        class="px-5 sm:px-6 py-2.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold transition-all whitespace-nowrap snap-center"
+        [ngClass]="selectedCategory === category
+          ? 'bg-white text-black shadow-lg scale-105'
+          : 'text-gray-400 hover:text-white active:scale-95'"
+      >
+        {{ category }}
+      </button>
+    </nav>
+
+  </div>
 </div>
 
 <style>
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+  /* Mantendo seu CSS de esconder scrollbar */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 </style>
