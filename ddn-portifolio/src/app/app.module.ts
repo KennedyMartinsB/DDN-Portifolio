@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { FilterComponent } from './components/filter/filter.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
 // import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
@@ -14,6 +17,9 @@ import { FilterComponent } from './components/filter/filter.component';
     HeaderComponent,
     GalleryComponent,
     FilterComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
 
   ],
   imports: [
