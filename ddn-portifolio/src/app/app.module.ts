@@ -10,6 +10,7 @@ import { FilterComponent } from './components/filter/filter.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { GalleryModalComponent } from './components/gallery-modal/gallery-modal.component';
 // import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
+    GalleryModalComponent,
 
   ],
   imports: [

@@ -12,6 +12,7 @@ export class GalleryComponent implements OnInit, OnChanges {
 
   items: GalleryItem[] = [];
   filteredItems: GalleryItem[] = [];
+  selectedItem: GalleryItem | null = null;
 
   constructor(private galleryService: GalleryService) { }
 
@@ -20,6 +21,17 @@ export class GalleryComponent implements OnInit, OnChanges {
       this.items = data;
       this.filterItems();
     });
+  }
+
+  openModal(item: GalleryItem) {
+    this.selectedItem = item;
+    // Prevent body scrolling when modal is open
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeModal() {
+    this.selectedItem = null;
+    document.body.style.overflow = 'auto';
   }
 
   ngOnChanges(changes: SimpleChanges): void {
