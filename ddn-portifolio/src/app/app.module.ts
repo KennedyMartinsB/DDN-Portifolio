@@ -22,7 +22,7 @@ import { GalleryModalComponent } from './components/gallery-modal/gallery-modal.
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    GalleryModalComponent,
+    GalleryModalComponent
 
   ],
   imports: [

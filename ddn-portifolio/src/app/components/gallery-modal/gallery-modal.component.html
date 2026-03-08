@@ -11,7 +11,7 @@
     </svg>
   </button>
 
-  <div class="relative w-full max-w-5xl xl:max-w-6xl h-[60vh] sm:h-[75vh] flex items-center justify-center">
+  <div class="relative w-full mt-[80px] max-w-5xl xl:max-w-6xl h-[60vh] sm:h-[75vh] flex items-center justify-center">
 
     <button *ngIf="item.images && item.images.length > 1"
       (click)="prevImage()"
@@ -39,7 +39,7 @@
     </button>
   </div>
 
-  <div class="mt-8 flex flex-col items-center gap-4">
+  <div class="mt-4 flex flex-col items-center gap-4">
     <div *ngIf="item.images && item.images.length > 1" class="flex gap-3 px-4 py-2 bg-[#6e6e6e] rounded-lg shadow-inner overflow-x-auto no-scrollbar max-w-[90vw]">
       <div
         *ngFor="let img of item.images; let i = index"
