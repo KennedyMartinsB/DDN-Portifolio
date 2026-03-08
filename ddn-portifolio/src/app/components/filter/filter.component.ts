@@ -9,13 +9,29 @@ export class FilterComponent {
   @Output() categoryChange = new EventEmitter<string>();
 
   categories = ['All', 'Originals', 'Fashion', 'Artists', 'Brands'];
-  // categories = ['Todos', 'originais', 'Celebridades', 'Publicidade', 'Filme'];
-  // Capas, Originais, moda, Marca, artistas
-
   selectedCategory = 'All';
 
-  selectCategory(category: string) {
-    this.selectedCategory = category;
-    this.categoryChange.emit(category);
+  // selectCategory(category: string) {
+  //   this.selectedCategory = category;
+  //   this.categoryChange.emit(category);
+  //   if (event?.currentTarget) {
+  //   (event.currentTarget as HTMLElement).scrollIntoView({
+  //     behavior: 'smooth',
+  //     inline: 'center',
+  //     block: 'nearest'
+  //   });
+  // }
+  // }
+
+  selectCategory(category: string, event?: Event) {
+  this.selectedCategory = category;
+  this.categoryChange.emit(category);
+  if (event?.currentTarget) {
+    (event.currentTarget as HTMLElement).scrollIntoView({
+      behavior: 'smooth',
+      inline: 'center',
+      block: 'nearest'
+    });
   }
+}
 }

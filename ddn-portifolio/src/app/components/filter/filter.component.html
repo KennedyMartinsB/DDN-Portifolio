@@ -1,25 +1,20 @@
-<div class="fixed bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-50 w-full px-4 sm:w-max">
-
-  <div class="overflow-x-auto no-scrollbar snap-x snap-mandatory touch-pan-x">
-
-    <nav class="bg-gray-900/80 backdrop-blur-md border border-gray-800 p-1.5 rounded-full flex items-center gap-1 min-w-max mx-auto shadow-2xl">
-      <button
-        *ngFor="let category of categories"
-        (click)="selectCategory(category)"
-        class="px-5 sm:px-6 py-2.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold transition-all whitespace-nowrap snap-center"
-        [ngClass]="selectedCategory === category
-          ? 'bg-white text-black shadow-lg scale-105'
-          : 'text-gray-400 hover:text-white active:scale-95'"
-      >
-        {{ category }}
-      </button>
-    </nav>
-
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-[94vw] sm:w-max sm:max-w-none">
+  <div class="relative">
+    <div class="absolute inset-y-0 left-0 w-10 bg-gradient-to-r  to-transparent z-10 pointer-events-none sm:hidden rounded-l-full"></div>
+    <div class="absolute inset-y-0 right-0 w-10 bg-gradient-to-l  to-transparent z-10 pointer-events-none sm:hidden rounded-r-full"></div>
+    <div class="overflow-x-auto no-scrollbar snap-x snap-mandatory touch-pan-x py-4 px-6">
+      <nav class="bg-gray-900/90 backdrop-blur-xl border border-white/10 p-1 rounded-full flex items-center gap-1.5 w-max mx-auto">
+        <button
+          *ngFor="let category of categories"
+          (click)="selectCategory(category, $event)"
+          class="px-5 py-2.5 rounded-full text-[12px] sm:text-xs font-bold transition-all duration-300 whitespace-nowrap snap-center outline-none select-none"
+          [ngClass]="selectedCategory === category
+            ? 'bg-white text-black scale-105'
+            : 'text-gray-400 hover:text-white active:bg-white/10 active:scale-95'"
+        >
+          {{ category }}
+        </button>
+      </nav>
+    </div>
   </div>
 </div>
-
-<style>
-  /* Mantendo seu CSS de esconder scrollbar */
-  .no-scrollbar::-webkit-scrollbar { display: none; }
-  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-</style>
