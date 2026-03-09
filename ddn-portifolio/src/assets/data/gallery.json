@@ -20,10 +20,11 @@
   { "id": 19, "title": "Moda Geracional", "year": "2026", "category": "Fashion", "imageUrl": "assets/img/moda/moda-2.jpg", "images": ["assets/img/moda/moda-2.jpg"] },
   { "id": 20, "title": "Moda Geracional", "year": "2026", "category": "Fashion", "imageUrl": "assets/img/moda/moda-3.jpg", "images": ["assets/img/moda/moda-3.jpg"] },
   { "id": 21, "title": "Moda Geracional", "year": "2026", "category": "Fashion", "imageUrl": "assets/img/moda/moda-4.jpg", "images": ["assets/img/moda/moda-4.jpg"] },
-  { "id": 22, "title": "Criolo", "year": "2026", "category": "Artists", "imageUrl": "assets/img/artistas/criolo/criolo-1.jpg", "images": ["assets/img/artistas/criolo/criolo-1.jpg", "assets/img/artistas/criolo/dino-2.jpg", "assets/img/artistas/criolo/amaro-3.jpg", "assets/img/artistas/criolo/CAD-4.jpg"] },
-  { "id": 23, "title": "Dino dSantiago", "year": "2026", "category": "Artists", "imageUrl": "assets/img/artistas/criolo/dino-2.jpg", "images": ["assets/img/artistas/criolo/dino-2.jpg"] },
-  { "id": 24, "title": "Amaro Freitas", "year": "2026", "category": "Artists", "imageUrl": "assets/img/artistas/criolo/amaro-3.jpg", "images": ["assets/img/artistas/criolo/amaro-3.jpg"] },
-  { "id": 25, "title": "Criolo, Amaro e Dino", "year": "2026", "category": "Artists", "imageUrl": "assets/img/artistas/criolo/CAD-4.jpg", "images": ["assets/img/artistas/criolo/CAD-4.jpg"] },
-  { "id": 26, "title": "LYKD STUDIO ©2024/5", "year": "2025", "category": "Brands", "imageUrl": "assets/img/marcas/lykd/lykd_1.png", "images": ["assets/img/marcas/lykd/lykd_2.png"] },
-  { "id": 27, "title": "LYKD STUDIO ©2024/5", "year": "2025", "category": "Brands", "imageUrl": "assets/img/marcas/lykd/lykd_2.png", "images": ["assets/img/marcas/lykd/lykd_1.png"] }
+  { "id": 22, "title": "Criolo", "year": "2026", "category": "Artists", "imageUrl": "assets/img/artistas/criolo/criolo-1.jpg", "images": ["assets/img/artistas/criolo/dino-2.jpg", "assets/img/artistas/criolo/amaro-3.jpg", "assets/img/artistas/criolo/CAD-4.jpg"] },
+  { "id": 23, "title": "Dino dSantiago", "year": "2026", "category": "Artists", "imageUrl": "assets/img/artistas/criolo/dino-2.jpg", "images": ["assets/img/artistas/criolo/criolo-1.jpg", "assets/img/artistas/criolo/amaro-3.jpg", "assets/img/artistas/criolo/CAD-4.jpg"] },
+  { "id": 24, "title": "Amaro Freitas", "year": "2026", "category": "Artists", "imageUrl": "assets/img/artistas/criolo/amaro-3.jpg", "images": ["assets/img/artistas/criolo/criolo-1.jpg", "assets/img/artistas/criolo/amaro-2.jpg", "assets/img/artistas/criolo/CAD-4.jpg"] },
+  { "id": 25, "title": "Criolo, Amaro e Dino", "year": "2026", "category": "Artists", "imageUrl": "assets/img/artistas/criolo/CAD-4.jpg", "images": ["assets/img/artistas/criolo/criolo-1.jpg", "assets/img/artistas/criolo/amaro-2.jpg", "assets/img/artistas/criolo/CAD-3.jpg"] },
+  { "id": 26, "title": "LYKD STUDIO ©2024/5", "year": "2025", "category": "Brands", "imageUrl": "assets/img/marcas/lykd/lykd_1.jpg", "images": ["assets/img/marcas/lykd/lykd_2.png", "assets/img/marcas/lykd/lykd_3.png"] },
+  { "id": 27, "title": "LYKD STUDIO ©2024/5", "year": "2025", "category": "Brands", "imageUrl": "assets/img/marcas/lykd/lykd_2.png", "images": ["assets/img/marcas/lykd/lykd_1.jpg", "assets/img/marcas/lykd/lykd_3.png"] },
+  { "id": 27, "title": "LYKD STUDIO ©2024/5", "year": "2025", "category": "Brands", "imageUrl": "assets/img/marcas/lykd/lykd_3.png", "images": ["assets/img/marcas/lykd/lykd_2.png", "assets/img/marcas/lykd/lykd_1.jpg"] }
 ]
