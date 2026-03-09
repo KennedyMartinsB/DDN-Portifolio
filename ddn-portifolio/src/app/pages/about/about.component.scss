@@ -1,0 +1,19 @@
+.social-btn {
+  @apply w-12 h-12 rounded-full border border-white flex items-center justify-center transition-all duration-300 ease-in-out text-white;
+  
+  &:hover {
+    @apply bg-white text-black scale-110;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  }
+}
+
+section {
+  font-family: 'Inter', sans-serif; /* Assuming Inter or similar for body */
+}
+
+h1 {
+  font-family: 'Playfair Display', serif; /* A common high-end serif for headers */
+}
+
+/* If fonts aren't imported, they will fallback gracefully */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;700&display=swap');
