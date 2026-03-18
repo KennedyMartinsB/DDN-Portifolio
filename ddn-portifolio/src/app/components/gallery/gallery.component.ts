@@ -1,4 +1,5 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { Subject, takeUntil } from 'rxjs';
 import { GalleryService } from '../../services/gallery.service';
 import { GalleryItem } from '../../models/gallery-item.model';
 
@@ -7,20 +8,30 @@ import { GalleryItem } from '../../models/gallery-item.model';
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss']
 })
-export class GalleryComponent implements OnInit, OnChanges {
+export class GalleryComponent implements OnInit, OnChanges, OnDestroy {
   @Input() activeCategory: string = 'All';
 
   items: GalleryItem[] = [];
   filteredItems: GalleryItem[] = [];
   selectedItem: GalleryItem | null = null;
+  errorMessage: string = '';
+  private destroy$ = new Subject<void>();
 
   constructor(private galleryService: GalleryService) { }
 
   ngOnInit(): void {
-    this.galleryService.getGalleryItems().subscribe(data => {
-      this.items = data;
-      this.filterItems();
-    });
+    this.galleryService.getGalleryItems()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe({
+        next: (data) => {
+          this.items = data;
+          this.filterItems();
+        },
+        error: (error) => {
+          this.errorMessage = 'Error loading the gallery. Please try again later.';
+          console.error('Error loading gallery:', error);
+        }
+      });
   }
 
   openModal(item: GalleryItem) {
@@ -38,6 +49,11 @@ export class GalleryComponent implements OnInit, OnChanges {
     if (changes['activeCategory']) {
       this.filterItems();
     }
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
   private filterItems() {

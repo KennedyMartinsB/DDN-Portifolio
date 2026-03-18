@@ -19,6 +19,10 @@
     </div>
 
   </div>
+
+  <div *ngIf="errorMessage" class="text-center py-8">
+    <p class="text-red-500 text-lg">{{ errorMessage }}</p>
+  </div>
 </main>
 
 <!-- Detailed Modal View -->
