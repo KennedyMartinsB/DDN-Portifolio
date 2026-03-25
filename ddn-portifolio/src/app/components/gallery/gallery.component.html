@@ -1,14 +1,15 @@
-<main class="pt-24 sm:pt-28 pb-24 px-4 sm:px-6">
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+<main class="bg-black pt-24 sm:pt-28 pb-24 px-4 sm:px-6">
+  <div
+    class="mx-auto w-full max-w-[1920px] columns-1 gap-x-2 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5">
 
     <div *ngFor="let item of filteredItems"
          (click)="openModal(item)"
-         class="relative group overflow-hidden rounded-sm cursor-pointer bg-black">
+         class="group relative mb-2 cursor-pointer break-inside-avoid">
       <img
         [src]="item.imageUrl"
         [alt]="item.title"
         loading="lazy"
-        class="w-full h-[550px] object-cover grayscale hover:grayscale-0 transition-all duration-500 ease-in-out transform group-hover:scale-105"
+        class="block h-auto w-full grayscale transition-all duration-500 ease-in-out group-hover:grayscale-0"
       >
       <!-- <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
         <div class="bg-white text-black px-4 py-3 rounded-sm shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">

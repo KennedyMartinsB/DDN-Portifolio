@@ -48,7 +48,7 @@
         class="relative w-16 h-12 sm:w-20 sm:h-14 cursor-pointer flex-shrink-0 overflow-hidden rounded-md transition-all border-2"
         [ngClass]="currentIndex === i ? 'border-black opacity-100 scale-105' : 'border-transparent opacity-40 hover:opacity-70'"
       >
-        <img [src]="img" loading="lazy" class="w-full h-full object-cover">
+        <img [src]="img" loading="lazy" class="w-full h-full object-contain bg-black">
       </div>
     </div>
     <p *ngIf="item.images && item.images.length > 1" class="text-xs font-medium text-gray-400 tracking-[0.2em] uppercase">
