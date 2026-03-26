@@ -8,7 +8,7 @@ import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 export class FilterComponent {
   @Output() categoryChange = new EventEmitter<string>();
 
-  categories = ['All', 'Magazine', 'Originals', 'Fashion', 'Artists', 'Brands'];
+  categories = ['All', 'Magazine', 'Originais', 'Fashion', 'Artists', 'Brands'];
   selectedCategory = 'All';
   filterMenuOpen = false;
 
