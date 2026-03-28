@@ -1,16 +1,36 @@
-<footer class="w-full bg-black text-white pt-0 pb-8 text-center text-[13px] sm:text-sm font-sans tracking-wide">
-  <!-- Thin white line (80% width, centered) -->
-  <div class="w-[80%] mx-auto border-t border-white/20 mb-8"></div>
+<footer class="w-full bg-black font-sans">
+  <div
+    class="bg-[#0c0c0c] px-6 py-8 text-white shadow-[0_-8px_40px_rgba(0,0,0,0.35)] sm:py-9 md:py-10"
+  >
+    <div
+      class="flex w-full flex-col items-center gap-6 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left"
+    >
+      <div
+        class="flex w-full flex-col items-center sm:w-auto sm:flex-row sm:items-baseline sm:justify-start sm:gap-5 md:gap-6"
+      >
+        <a
+          routerLink="/home"
+          class="inline-flex transition-opacity hover:opacity-90"
+        >
+          <img
+            src="../../../assets/img/logos/ddn-circle-chrome-logo-sf.png"
+            alt="DDN-Chrome-Logo"
+            class="h-32 w-32 object-contain transition-transform duration-300 hover:scale-105 sm:h-36 sm:w-36 md:h-40 md:w-40"
+          />
+        </a>
 
-  <div class="container mx-auto px-4">
-    © 2026 Copyright
-    <a routerLink="/home" class="font-semibold hover:text-gray-300 transition-colors">Pedro DDN</a>
-    <span class="mx-2">|</span>
-    <a
-      href="https://www.linkedin.com/in/kennedy-martins-b3b1381aa/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="text-gray-400 hover:text-white transition-colors"
-    >Developed by Kennedy Martins</a>
+      </div>
+
+      <a
+        href="https://www.linkedin.com/in/kennedy-martins-b3b1381aa/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex w-full max-w-sm flex-wrap items-center justify-center gap-1.5 text-xs text-gray-400 transition-colors hover:text-white sm:w-auto sm:max-w-none sm:flex-nowrap sm:justify-start sm:text-sm"
+      >
+        Developed by Kennedy Martins
+        <i class="fa-solid fa-arrow-up-right-from-square text-[0.7em] opacity-80" aria-hidden="true"></i>
+        <span class="sr-only">(abre numa nova janela)</span>
+      </a>
+    </div>
   </div>
 </footer>

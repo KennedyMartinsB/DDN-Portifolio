@@ -1,9 +1,37 @@
-<div class="pointer-events-none fixed inset-x-0 bottom-8 z-50 w-full pb-6 sm:bottom-20">
-  <!-- Mobile: botão grid + painel -->
+<!-- Backdrop mobile: fora de qualquer ancestor pointer-events-none -->
+<div
+  *ngIf="filterMenuOpen"
+  id="filter-menu-panel"
+  class="pointer-events-auto fixed inset-0 z-[90] flex items-end justify-end bg-black/75 px-4 pb-8 pr-5 pt-16 backdrop-blur-sm sm:hidden"
+  (click)="closeFilterMenu()"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Opções de filtro"
+>
+  <nav
+    class="max-h-[min(70vh,420px)] w-[min(92vw,20rem)] overflow-y-auto rounded-2xl border border-white/10 bg-black p-2 shadow-2xl"
+    (click)="$event.stopPropagation()"
+  >
+    <button
+      *ngFor="let category of categories"
+      type="button"
+      (click)="selectCategoryMobile(category)"
+      class="w-full rounded-xl px-4 py-3.5 text-left text-[13px] font-bold outline-none transition-colors duration-200 select-none"
+      [ngClass]="selectedCategory === category
+        ? 'bg-white text-black'
+        : 'text-gray-400 hover:bg-white/5 hover:text-white active:bg-white/10'"
+    >
+      {{ category }}
+    </button>
+  </nav>
+</div>
+
+<div class="pointer-events-none fixed inset-x-0 bottom-1 z-[100] w-full pb-4 sm:bottom-0 md:bottom-0 lg:bottom-8">
+  <!-- Mobile: só o FAB (acima do backdrop) -->
   <div class="relative flex w-full justify-end px-4 pr-5 sm:hidden">
     <button
       type="button"
-      class="relative z-[70] pointer-events-auto flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-white/10 bg-black text-lg text-white shadow-lg transition-transform duration-200 active:scale-95"
+      class="relative z-[110] flex h-14 w-14 shrink-0 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-black text-lg text-white shadow-lg transition-transform duration-200 pointer-events-auto active:scale-95"
       (click)="onMobileFilterButtonClick()"
       [attr.aria-expanded]="filterMenuOpen"
       aria-haspopup="true"
@@ -16,33 +44,6 @@
         aria-hidden="true"
       ></i>
     </button>
-
-    <div
-      *ngIf="filterMenuOpen"
-      id="filter-menu-panel"
-      class="fixed inset-0 z-[60] flex items-end justify-end bg-black/75 px-4 pb-28 pr-5 pt-16 backdrop-blur-sm sm:hidden"
-      (click)="closeFilterMenu()"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Opções de filtro"
-    >
-      <nav
-        class="max-h-[min(70vh,420px)] w-[min(92vw,20rem)] overflow-y-auto rounded-2xl border border-white/10 bg-black p-2 shadow-2xl"
-        (click)="$event.stopPropagation()"
-      >
-        <button
-          *ngFor="let category of categories"
-          type="button"
-          (click)="selectCategoryMobile(category)"
-          class="w-full rounded-xl px-4 py-3.5 text-left text-[13px] font-bold transition-colors duration-200 outline-none select-none"
-          [ngClass]="selectedCategory === category
-            ? 'bg-white text-black'
-            : 'text-gray-400 hover:bg-white/5 hover:text-white active:bg-white/10'"
-        >
-          {{ category }}
-        </button>
-      </nav>
-    </div>
   </div>
 
   <!-- Tablet / desktop: pills horizontais (≥ sm) -->
